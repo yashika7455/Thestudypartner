@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: studypartner-deployment
+  labels:
+    app: studypartner
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: studypartner
+  template:
+    metadata:
+      labels:
+        app: studypartner
+    spec:
+      containers:
+        - name: studypartner
+          image: yashikaa1/studypartner:latest
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+
