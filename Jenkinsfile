@@ -38,17 +38,23 @@ pipeline {
             }
         }
 
-  stage('Deploy to Kubernetes') {
-    steps {
-        sh '''
-          echo "Deploying to Kubernetes..."
-          kubectl --kubeconfig=/var/lib/jenkins/.kube/config apply -f k8s/deployment.yaml
-          kubectl --kubeconfig=/var/lib/jenkins/.kube/config apply -f k8s/service.yaml
-          kubectl --kubeconfig=/var/lib/jenkins/.kube/config rollout status deployment/studypartner-deployment
-        '''
+    stage('Deploy to Kubernetes') {
+        steps {
+            sh '''
+              echo "Ensuring Minikube is running..."
+              # If minikube is not running, start it
+              minikube status || minikube start --driver=docker
+
+              echo "Deploying to Kubernetes..."
+              kubectl --kubeconfig=/var/lib/jenkins/.kube/config apply --validate=false -f k8s/deployment.yaml
+              kubectl --kubeconfig=/var/lib/jenkins/.kube/config apply --validate=false -f k8s/service.yaml
+
+              echo "Waiting for rollout..."
+              kubectl --kubeconfig=/var/lib/jenkins/.kube/config rollout status deployment/studypartner-deployment
+            '''
+        }
     }
-  }
-}
+
 
     post {
         always {
