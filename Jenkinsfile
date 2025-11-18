@@ -38,17 +38,17 @@ pipeline {
             }
         }
 
-        stage('Deploy to Kubernetes') {
-            steps {
-                sh '''
-                  echo "Deploying to Kubernetes..."
-                  kubectl apply -f k8s/deployment.yaml
-                  kubectl apply -f k8s/service.yaml
-                  kubectl rollout status deployment/studypartner-deployment
-                '''
-            }
-        }
+  stage('Deploy to Kubernetes') {
+    steps {
+        sh '''
+          echo "Deploying to Kubernetes..."
+          kubectl --kubeconfig=/var/lib/jenkins/.kube/config apply -f k8s/deployment.yaml
+          kubectl --kubeconfig=/var/lib/jenkins/.kube/config apply -f k8s/service.yaml
+          kubectl --kubeconfig=/var/lib/jenkins/.kube/config rollout status deployment/studypartner-deployment
+        '''
     }
+  }
+}
 
     post {
         always {
