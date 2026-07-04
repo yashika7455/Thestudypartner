@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: studypartner
-          image: yashikaa1/studypartner:build-1
+          image: yashikaa1/studypartner:build-2
           imagePullPolicy: Always
           ports:
             - containerPort: 80
