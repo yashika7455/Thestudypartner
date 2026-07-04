@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: studypartner-deployment
+  namespace: studypartner
   labels:
     app: studypartner
 spec:
@@ -16,8 +17,7 @@ spec:
     spec:
       containers:
         - name: studypartner
-          image: yashikaa1/studypartner:latest
+          image: yashikaa1/studypartner:build-2
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
-          imagePullPolicy: Always
-
