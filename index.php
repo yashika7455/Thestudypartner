@@ -94,7 +94,7 @@ session_start();
                         <div class="row">
                            <div class="col-md-6">
                               <h1 class="banner_taital">Welcome To The Study Partner</h1>
-                              <p class="banner_text">"The Study Partner" is an educational website designed to facilitate collaborative learning and enhance study efficiency through AI-driven tools</p>
+                              <p class="banner_text">The Study Partner is a smart educational platform that helps students learn together, access study resources, and improve learning efficiency with AI-powered tools</p>
                               <div class="btn_main">
                                  <div class="about_bt active"><a href="#">About Us</a></div>
                                  <!-- <div class="quote_bt"><a href="#">Get A Quote</a></div> -->
@@ -113,7 +113,7 @@ session_start();
                         <div class="row">
                            <div class="col-md-6">
                               <h1 class="banner_taital">Welcome To The Study Partner</h1>
-                              <p class="banner_text">"The Study Partner" is an educational website designed to facilitate collaborative learning and enhance study efficiency through AI-driven tools</p>
+                              <p class="banner_text">The Study Partner is a smart educational platform that helps students learn together, access study resources, and improve learning efficiency with AI-powered tools</p>
                               <div class="btn_main">
                                  <div class="about_bt active"><a href="#">About Us</a></div>
                                  <!-- <div class="quote_bt"><a href="#">Get A Quote</a></div> -->
@@ -132,7 +132,7 @@ session_start();
                         <div class="row">
                            <div class="col-md-6">
                               <h1 class="banner_taital">Welcome To The Study Partner</h1>
-                              <p class="banner_text">"The Study Partner" is an educational website designed to facilitate collaborative learning and enhance study efficiency through AI-driven tools</p>
+                              <p class="banner_text">The Study Partner is a smart educational platform that helps students learn together, access study resources, and improve learning efficiency with AI-powered tools</p>
                               <div class="btn_main">
                                  <div class="about_bt active"><a href="#">About Us</a></div>
                                  <!-- <div class="quote_bt"><a href="#">Get A Quote</a></div> -->
